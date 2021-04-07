@@ -1,0 +1,232 @@
+body {
+    color: #40514E;
+    margin: 0;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
+h1 {
+    font-family: 'Sacramento', cursive;
+    font-size: 5.625rem;
+    margin: 50px auto 25px auto;
+    color: #66BFBF;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #66BFBF;
+    font-weight: normal;
+    padding-bottom: 10px;
+    padding-top:20px;
+    margin-block-start: 0.25rem;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #11999E
+}
+
+a {
+    color: #11999E;
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px 20px;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#EAF6F6
+}
+
+p {
+    line-height: 2;
+}
+
+.intro {
+    width: 27%;
+    margin: auto;
+}
+
+.turbine {
+    max-width: 20%;
+}
+
+.profile-pic {
+    border-radius: 100%;
+    max-width: 8%;
+    position: relative;
+}
+
+.cable-pic {
+    max-width: 15%;
+    float: left;
+    margin-right: 30px;
+}
+
+.web-pic {
+    max-width: 15%;
+    float: right;
+    margin-left: 30px;
+}
+
+.skill-row {
+    width: 50%;
+    margin: 100px auto 100px auto;
+    text-align: left;
+}
+
+.copyright{
+    color: #EAF6F6;
+    font-size:0.75rem;
+    padding: 20px 0; 
+}
+
+.top-container {
+    background-color: #E4F9F5;
+    position: relative;
+    padding-top: 15px;
+}
+
+hr {
+    width: 4%;
+    border-style: none;
+    border-top-style: dotted;
+    border-color: LIGHTGREY;
+    border-width: 6px;
+}
+
+.middle-container {
+    margin: 80px 0;
+}
+
+.bottom-container {
+    background-color: #66BFBF;
+    padding: 50px 0 20px;
+}
+
+.top-cloud {
+    position: absolute;
+    right: 15%;
+    top: 12%;
+}
+
+.bottom-cloud {
+    position: absolute;
+    left: 15%;
+    bottom: 25%;
+}
+
+.bottom-txt{
+    margin:auto;
+    width:40%;
+    padding:20px;
+}
+
+.BUTTON_UDZ {
+    background: #66BFBF;
+    background-image: -webkit-linear-gradient(top, #66BFBF, #66BFBF);
+    background-image: -moz-linear-gradient(top, #66BFBF, #66BFBF);
+    background-image: -ms-linear-gradient(top, #66BFBF, #66BFBF);
+    background-image: -o-linear-gradient(top, #66BFBF, #66BFBF);
+    background-image: linear-gradient(to bottom, #66BFBF, #66BFBF);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-family: Open Sans;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 13px;
+    text-shadow: 1px 1px 20px #000000;
+    border: solid #FFFFFF 0px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+
+.BUTTON_UDZ:hover {
+    border: solid #337FED 1px;
+    background: #1E62D0;
+    background-image: -webkit-linear-gradient(top, #1E62D0, #3D94F6);
+    background-image: -moz-linear-gradient(top, #1E62D0, #3D94F6);
+    background-image: -ms-linear-gradient(top, #1E62D0, #3D94F6);
+    background-image: -o-linear-gradient(top, #1E62D0, #3D94F6);
+    background-image: linear-gradient(to bottom, #1E62D0, #3D94F6);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.calcBox {
+    display:grid;
+    grid-template-columns: 15% auto 300px 15%;
+    grid-template-rows: 600px;
+    padding: 15px;
+    }
+
+.calcParameters {
+    margin: 10px 20px 20px 20px; 
+    padding: 15px;
+    display:grid;
+    align-content: center;
+    border: 5px double #66BFBF;
+    border-radius: 15px 50px;
+}
+
+.calcResults {
+    margin: 10px 0 20px 20px; 
+    padding: 15px;
+    border: 5px double #66BFBF;
+    border-radius: 15px 50px;
+}
+
+input { 
+    text-align: center; 
+}
+
+.selectors {
+    display:grid;
+    grid-template-columns: auto auto;
+    margin: 10px 0px 20px 0px; 
+}
+
+.selector1 {
+    margin: 0px 20px 0px 0px;
+    text-align:right;
+}
+
+.selector2 {
+    text-align:left;
+    padding: 0 0px 0 20px;
+}
+
+.autoBtn {
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background:linear-gradient(to bottom, #66BFBF 5%, #66BFBF 100%);
+	background-color:#66BFBF;
+	border-radius:6px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+}
+.autoBtn:hover {
+	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	background-color:#378de5;
+}
+.autoBtn:active {
+	position:relative;
+	top:1px;
+}
+
+.fields {
+    margin: 20px;
+}
