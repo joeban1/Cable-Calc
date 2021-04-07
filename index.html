@@ -18,100 +18,104 @@
 
     <h2>AS/NZS:3008 Voltage Drop Calculator</h2>
     <form id=form1>
-        <div class="calcBox">
-            <!-- BEGIN Calc wrapper -->
-            <div class="grid1"></div>
-            <div class="calcParameters">
-                <div class="selectors">
-                    <div class="selector1">
-                        <p>1. Initial Voltage</p>
+    <div class="calcBox">
+        <!-- BEGIN Calc wrapper -->
+        <div class="grid1"></div>
+        <div class="calcParameters">
+            <div class="selectors">
+                <div class="selector1">
+                    <p>1. Initial Voltage</p>
 
-                        <select name="voltDrop_volts" size="1" style="padding: 3px;">
-                            <option value="12">12V</option>
-                            <option value="24">24V</option>
-                            <option selected="selected" value="230">230V</option>
-                            <option value="240">240V</option>
-                            <option value="400">400V</option>
-                            <option value="415">415V</option>
-                        </select>
-                    </div>
-                    <div class="selector2">
-                        <p>2. Cable size (mm²)</p>
-
-                        <select name="voltDrop_cableSize" size="1" style="padding: 3px;">
-                            <option value="1.5">1.5</option>
-                            <option selected="selected" value="2.5">2.5</option>
-                            <option value="4">4</option>
-                            <option value="6">6</option>
-                            <option value="10">10</option>
-                            <option value="16">16</option>
-                            <option value="25">25</option>
-                            <option value="35">35</option>
-                            <option value="50">50</option>
-                            <option value="70">70</option>
-                            <option value="95">95</option>
-                            <option value="120">120</option>
-                            <option value="150">150</option>
-                            <option value="185">185</option>
-                            <option value="240">240</option>
-                            <option value="300">300</option>
-                            <option value="400">400</option>
-                            <option value="500">500</option>
-                            <option value="630">630</option>
-                        </select>
-                    </div>
+                    <select name="voltDrop_volts" size="1" style="padding: 3px;">
+                        <option value="12">12V</option>
+                        <option value="24">24V</option>
+                        <option selected="selected" value="230">230V</option>
+                        <option value="240">240V</option>
+                        <option value="400">400V</option>
+                        <option value="415">415V</option>
+                    </select>
                 </div>
-                <div class="fields">3. Current (Amps)</p>
+                <div class="selector2">
+                    <p>2. Cable size (mm²)</p>
 
-                    <input align="bottom" class="sized" name="voltDrop_amps" size="15" style="padding: 3px;"
-                        type="text" />
+                    <select name="voltDrop_cableSize" size="1" style="padding: 3px;">
+                        <option value="1.5">1.5</option>
+                        <option selected="selected" value="2.5">2.5</option>
+                        <option value="4">4</option>
+                        <option value="6">6</option>
+                        <option value="10">10</option>
+                        <option value="16">16</option>
+                        <option value="25">25</option>
+                        <option value="35">35</option>
+                        <option value="50">50</option>
+                        <option value="70">70</option>
+                        <option value="95">95</option>
+                        <option value="120">120</option>
+                        <option value="150">150</option>
+                        <option value="185">185</option>
+                        <option value="240">240</option>
+                        <option value="300">300</option>
+                        <option value="400">400</option>
+                        <option value="500">500</option>
+                        <option value="630">630</option>
+                    </select>
                 </div>
-                <div class="fields">4. Cable Length (m)</p>
-
-                    <input align="bottom" class="sized" name="voltDrop_m" size="15" style="padding: 3px;" type="text" />
-                </div>
-                <div class="fields">
-                    <button type="button" class="autoBtn" onclick="printAnswer()">Calculate</button>
-
-                    <button type="button" class="autoBtn" onclick="autoCalc()">Auto Calc</button>
-                </div>
-                <p>Note: Industry standard is a voltage drop of no greater than 5%.</p>
-
             </div>
-            <div class=calcResults>
-                <p>Final Voltage (V)</p>
-                <div class="results-box">
-                    <p id="vFinal" style="margin: 10px 0;">&nbsp;</p>
-                </div>
+            <div class="fields">3. Current (Amps)</p>
 
-                <p>Voltage Drop (V)</p>
-                <div class="results-box">
-                    <p id="vDrop" style="margin: 10px 0;">&nbsp;</p>
-                </div>
-
-                <p>Voltage Drop (%)</p>
-                <div class="results-box1">
-                    <p id="vDropPercent" style="margin: 10px 0;"></p>
-                    <p id="vDropPercentText"></p>
-                </div>
-
-                <p>Current Carrying Capacity</p>
-                <div class="checkFLC">
-                    <p id="FLC"></p>
-                    <p id="FLCtext"></p>
-                </div>
-                <div class="grid2"></div>
+                <input align="bottom" class="sized" name="voltDrop_amps" size="15" style="padding: 3px;" type="text" />
             </div>
-    </form>
+            <div class="fields">4. Cable Length (m)</p>
 
+                <input align="bottom" class="sized" name="voltDrop_m" size="15" style="padding: 3px;" type="text" />
+            </div>
+            <div class="fields">
+                <button type="button" class="autoBtn" onclick="printAnswer()">Calculate</button>
 
-    <div class="errorMsg"></div>
-    <!-- displays error messages to user -->
+                <button type="button" class="autoBtn" onclick="autoCalc()">Auto Calc</button>
+            </div>
+            <p>Note: Industry standard is a voltage drop of no greater than 5%.</p>
+
+        </div>
+        <div class=calcResults>
+            <p>Final Voltage (V)</p>
+            <div class="results-box">
+                <p id="vFinal" style="margin: 10px 0;">&nbsp;</p>
+            </div>
+
+            <p>Voltage Drop (V)</p>
+            <div class="results-box">
+                <p id="vDrop" style="margin: 10px 0;">&nbsp;</p>
+            </div>
+
+            <p>Voltage Drop (%)</p>
+            <div class="results-box1">
+                <p id="vDropPercent" style="margin: 10px 0;"></p>
+                <p id="vDropPercentText"></p>
+            </div>
+
+            <p>Current Carrying Capacity</p>
+            <div class="checkFLC">
+                <p id="FLC"></p>
+                <p id="FLCtext"></p>
+            </div>
+            
+        </div>
     </div>
-    <!-- END Calc wrapper -->
-
+    </form>
+ 
     <script src="index.js" charset="utf-8"></script>
 </body>
+
+<footer>
+    <div class="bottom-container">
+        <a class="footer-link" href="https://www.linkedin.com/in/joe-cappeluti-820751138/">LinkedIn</a>
+        <a class="footer-link" href="https://joeban1.github.io/mysite/">Resume</a>
+        <a class="footer-link"
+            href="https://researchrepository.murdoch.edu.au/id/eprint/40401/1/Cappeluti2017%20.pdf">Thesis</a>
+        <p class="copyright">© 2020 Joe Cappeluti.</p>
+    </div>
+</footer>
 
 </html>
 
