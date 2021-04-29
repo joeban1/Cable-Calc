@@ -18,7 +18,7 @@ h2 {
     color: #66BFBF;
     font-weight: normal;
     padding-bottom: 10px;
-    padding-top:20px;
+    padding-top: 20px;
     margin-block-start: 0.25rem;
 }
 
@@ -35,7 +35,7 @@ a {
 }
 
 a:hover {
-    color:#EAF6F6
+    color: #EAF6F6
 }
 
 p {
@@ -75,10 +75,10 @@ p {
     text-align: left;
 }
 
-.copyright{
+.copyright {
     color: #EAF6F6;
-    font-size:0.75rem;
-    padding: 20px 0; 
+    font-size: 0.75rem;
+    padding: 20px 0;
 }
 
 .top-container {
@@ -104,6 +104,13 @@ hr {
     padding: 50px 0 20px;
 }
 
+.header-container {
+    background-color: #66BFBF;
+    padding: 10px 0 10px;
+    text-align: right;
+    font-size: .8rem;
+}
+
 .top-cloud {
     position: absolute;
     right: 15%;
@@ -116,10 +123,10 @@ hr {
     bottom: 25%;
 }
 
-.bottom-txt{
-    margin:auto;
-    width:40%;
-    padding:20px;
+.bottom-txt {
+    margin: auto;
+    width: 40%;
+    padding: 20px;
 }
 
 .BUTTON_UDZ {
@@ -160,74 +167,120 @@ hr {
 }
 
 .calcBox {
-    display:grid;
-    grid-template-columns: 15% auto 300px 15%;
+    display: grid;
+    grid-template-columns: 10% 40% 40% 10%;
     grid-template-rows: 600px;
     padding: 15px;
-    }
+    min-height: 100%;
+    position: relative;
+}
 
 .calcParameters {
-    margin: 10px 20px 20px 20px; 
-    padding: 15px;
-    display:grid;
+    margin: 10px 20px 20px 20px;
+    padding: 15px 15px 15px 15px;
+    display: grid;
     align-content: center;
     border: 5px double #66BFBF;
     border-radius: 15px 50px;
 }
 
 .calcResults {
-    margin: 10px 0 20px 20px; 
-    padding: 15px;
+    margin: 10px 0 20px 20px;
+    padding: 10px;
     border: 5px double #66BFBF;
     border-radius: 15px 50px;
+    display: grid;
+    grid-row-gap: 5px;
+    grid-template-rows: 20% 20% auto auto;
 }
 
-input { 
-    text-align: center; 
+input {
+    text-align: center;
 }
 
 .selectors {
-    display:grid;
+    display: grid;
     grid-template-columns: auto auto;
-    margin: 10px 0px 20px 0px; 
+    margin: 0px 0px 10px 0px;
 }
 
 .selector1 {
     margin: 0px 20px 0px 0px;
-    text-align:right;
+    text-align: right;
 }
 
 .selector2 {
-    text-align:left;
-    padding: 0 0px 0 20px;
+    text-align: left;
+    padding: 0 0px 0 10px;
+}
+
+#selector {
+    padding: 3px;
+    width: 180px;
+    height: 35px;
+    align-content: center;
+    font-size: 12px;
 }
 
 .autoBtn {
-	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
-	background:linear-gradient(to bottom, #66BFBF 5%, #66BFBF 100%);
-	background-color:#66BFBF;
-	border-radius:6px;
-	border:1px solid #84bbf3;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #528ecc;
+    box-shadow: inset 0px 1px 0px 0px #bbdaf7;
+    background: linear-gradient(to bottom, #66BFBF 5%, #66BFBF 100%);
+    background-color: #66BFBF;
+    border-radius: 6px;
+    border: 1px solid #84bbf3;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #528ecc;
 }
+
 .autoBtn:hover {
-	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
-	background-color:#378de5;
+    background: linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+    background-color: #378de5;
 }
+
 .autoBtn:active {
-	position:relative;
-	top:1px;
+    position: relative;
+    top: 1px;
 }
 
 .fields {
-    margin: 20px;
+    margin: 10px;
 }
 
+footer {
+    display: grid;
+    align-content: bottom;
+}
+
+.soon-container {
+    display: grid;
+    height: 75vh;
+    align-items: center;
+}
+
+.login-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-content: center;
+    border: 5px double #66BFBF;
+    border-radius: 15px 50px;
+    margin: 0px 20px 20px 20px;
+    height: 50%;
+    text-align: center;
+    justify-content:center;
+}
+
+.box {
+    display: grid;
+    margin:-25px 0 0 0;
+    grid-template-columns: 25% 50% 25%;
+    height: 75vh;
+    align-items: center;
+    justify-content:center;
+}

@@ -11,8 +11,8 @@ function printAnswer() {
         reactance = 0.08;
         FLC = 904;
     } else if (cableSize === 500) {
-        ohm = 0.0506,
-            reactance = 0.082;
+        ohm = 0.0506;
+        reactance = 0.082;
         FLC = 805;
     } else if (cableSize === 400) {
         ohm = 0.062;
@@ -107,13 +107,21 @@ function printAnswer() {
 
         document.getElementsByClassName("results-box1")[0].style.color = 'red';
         document.getElementById("vDropPercentText").innerHTML = "Voltage drop too high! Increase cable size";
+    } else if (isNaN(vDropPercent)) {
+        document.getElementsByClassName("results-box1")[0].style.color = 'red';
+        document.getElementById("vFinal").innerHTML = "";
+        document.getElementById("vDrop").innerHTML = "";
+        document.getElementById("vDropPercent").innerHTML = "";
+        document.getElementById("vDropPercentText").innerHTML = "Enter cable parameters.";
     } else {
         document.getElementsByClassName("results-box1")[0].style.color = '#0fbd3d';
         document.getElementById("vDropPercentText").innerHTML = "Cable sized correctly.";
     }
 
-
-    if (FLC > amps) {
+    if (isNaN(vDropPercent)) {
+        document.getElementsByClassName("checkFLC")[0].style.color = 'red';
+        document.getElementById("FLCtext").innerHTML = "Enter cable parameters.";
+    } else if (FLC > amps) {
         document.getElementsByClassName("checkFLC")[0].style.color = '#0fbd3d';
         document.getElementById("FLCtext").innerHTML = "FLC > Current carrying capacity. Cable size OK.";
     } else {

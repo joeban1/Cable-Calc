@@ -15,95 +15,130 @@
 </head>
 
 <body>
+    <div class="header-container">
+        <a class="footer-link" href="login.html">CableCC</a>
+        <a class="footer-link" href="index.html">Cable Sizing</a>
+        <a class="footer-link" href="demand.html">Max Demand</a>
+        <a class="footer-link" href="earth.html">Earth Design</a>
+        <a class="footer-link" href="fault.html">Fault Level</a>
+    </div>
 
     <h2>AS/NZS:3008 Voltage Drop Calculator</h2>
-    <form id=form1>
-    <div class="calcBox">
-        <!-- BEGIN Calc wrapper -->
-        <div class="grid1"></div>
-        <div class="calcParameters">
-            <div class="selectors">
-                <div class="selector1">
-                    <p>1. Initial Voltage</p>
+    <form action="action.php" method="POST">
+        <div class="calcBox">
+            <!-- BEGIN Calc wrapper -->
+            <div class="grid1"></div>
+            <div class="calcParameters">
+                <div class="selectors">
+                    <div class="selector1">
+                        <p>1. Initial Voltage</p>
 
-                    <select name="voltDrop_volts" size="1" style="padding: 3px;">
-                        <option value="12">12V</option>
-                        <option value="24">24V</option>
-                        <option selected="selected" value="230">230V</option>
-                        <option value="240">240V</option>
-                        <option value="400">400V</option>
-                        <option value="415">415V</option>
+                        <select name="voltDrop_volts" size="1" style="padding: 3px;">
+                            <option value="12">12V</option>
+                            <option value="24">24V</option>
+                            <option selected="selected" value="230">230V</option>
+                            <option value="240">240V</option>
+                            <option value="400">400V</option>
+                            <option value="415">415V</option>
+                        </select>
+                    </div>
+                    <div class="selector2">
+                        <p>2. Cable size (mm²)</p>
+
+                        <select name="voltDrop_cableSize" size="1" style="padding: 3px;">
+                            <option value="1.5">1.5</option>
+                            <option selected="selected" value="2.5">2.5</option>
+                            <option value="4">4</option>
+                            <option value="6">6</option>
+                            <option value="10">10</option>
+                            <option value="16">16</option>
+                            <option value="25">25</option>
+                            <option value="35">35</option>
+                            <option value="50">50</option>
+                            <option value="70">70</option>
+                            <option value="95">95</option>
+                            <option value="120">120</option>
+                            <option value="150">150</option>
+                            <option value="185">185</option>
+                            <option value="240">240</option>
+                            <option value="300">300</option>
+                            <option value="400">400</option>
+                            <option value="500">500</option>
+                            <option value="630">630</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="fields">
+                    <P>3. Cable Type</P>
+                    <select name="voltDrop_cableType" id="selector">
+                        <option value="1|V-75">1C Cu PVC/PVC V-75</option>
+                        <option selected="selected" value="1|X-90">1C Cu PVC/PVC V-90</option>
+                        <option value="1|X-90">1C Cu XLPE/PVC X-90</option>
+                        <option value="1|X-110">1C Cu XLPE/PVC X-110 0.6/1kV</option>
+                        <option value="1|V-75">1C Cu FLEX V-75 0.6/1kV</option>
+                        <option value="1|X-90">1C Cu FLEX V-90 0.6/1kV</option>
+                        <option value="1|X-90">1C Cu FLEX X-90 0.6/1kV</option>
+                        <option value="1|X-110">1C Cu FLEX R-E-110 0.6/1kV</option>
+                        <option value="2|V-75">3C+E Cu PVC/PVC V-75 0.6/1kV</option>
+                        <option value="2|X-90">3C+E Cu XLPE/PVC X-90 0.6/1kV</option>
+                        <option value="2|X-110">3C+E Cu XLPE/PVC X-110 0.6/1kV</option>
+                        <option value="2|V-75">4C+E Cu PVC/PVC V-75 0.6/1kV</option>
+                        <option value="2|X-90">4C+E Cu XLPE/PVC X-90 0.6/1kV</option>
+                        <option value="2|X-110">4C+E Cu XLPE/PVC X-110 0.6/1kV</option>
+                        <option value="2|V-75">3C+E Cu FLEX V-75 0.6/1kV</option>
+                        <option value="2|X-90">3C+E Cu FLEX X-90 0.6/1kV</option>
+                        <option value="2|X-110">3C+E Cu FLEX R-E-110 0.6/1kV</option>
+                        <option value="2|V-75">4C+E Cu FLEX V-75 0.6/1kV</option>
+                        <option value="2|X-90">4C+E Cu FLEX X-90 0.6/1kV</option>
+                        <option value="2|X-110">4C+E Cu FLEX R-E-110 0.6/1kV</option>
+                        <option value="2|X-90">3C+3E Cu XLPE/SCN/PVC X-90 0.6/1kV</option>
                     </select>
                 </div>
-                <div class="selector2">
-                    <p>2. Cable size (mm²)</p>
+                <div class="fields">3. Current (Amps)</p>
 
-                    <select name="voltDrop_cableSize" size="1" style="padding: 3px;">
-                        <option value="1.5">1.5</option>
-                        <option selected="selected" value="2.5">2.5</option>
-                        <option value="4">4</option>
-                        <option value="6">6</option>
-                        <option value="10">10</option>
-                        <option value="16">16</option>
-                        <option value="25">25</option>
-                        <option value="35">35</option>
-                        <option value="50">50</option>
-                        <option value="70">70</option>
-                        <option value="95">95</option>
-                        <option value="120">120</option>
-                        <option value="150">150</option>
-                        <option value="185">185</option>
-                        <option value="240">240</option>
-                        <option value="300">300</option>
-                        <option value="400">400</option>
-                        <option value="500">500</option>
-                        <option value="630">630</option>
-                    </select>
+                    <input align="bottom" class="sized" name="voltDrop_amps" size="15" style="padding: 3px;"
+                        type="text" />
                 </div>
-            </div>
-            <div class="fields">3. Current (Amps)</p>
+                <div class="fields">4. Cable Length (m)</p>
 
-                <input align="bottom" class="sized" name="voltDrop_amps" size="15" style="padding: 3px;" type="text" />
-            </div>
-            <div class="fields">4. Cable Length (m)</p>
+                    <input align="bottom" class="sized" name="voltDrop_m" size="15" style="padding: 3px;" type="text" />
+                </div>
+                <div class="fields">
+                    <button type="button" class="autoBtn" onclick="printAnswer()">Calculate</button>
 
-                <input align="bottom" class="sized" name="voltDrop_m" size="15" style="padding: 3px;" type="text" />
-            </div>
-            <div class="fields">
-                <button type="button" class="autoBtn" onclick="printAnswer()">Calculate</button>
-
-                <button type="button" class="autoBtn" onclick="autoCalc()">Auto Calc</button>
-            </div>
-            <p>Note: Industry standard is a voltage drop of no greater than 5%.</p>
-
-        </div>
-        <div class=calcResults>
-            <p>Final Voltage (V)</p>
-            <div class="results-box">
-                <p id="vFinal" style="margin: 10px 0;">&nbsp;</p>
-            </div>
-
-            <p>Voltage Drop (V)</p>
-            <div class="results-box">
-                <p id="vDrop" style="margin: 10px 0;">&nbsp;</p>
-            </div>
-
-            <p>Voltage Drop (%)</p>
-            <div class="results-box1">
-                <p id="vDropPercent" style="margin: 10px 0;"></p>
-                <p id="vDropPercentText"></p>
-            </div>
-
-            <p>Current Carrying Capacity</p>
-            <div class="checkFLC">
-                <p id="FLC"></p>
-                <p id="FLCtext"></p>
-            </div>
-            
-        </div>
-    </div>
+                    <button type="button" class="autoBtn" onclick="autoCalc()">Auto Calc</button>
+                </div>
+                <p>Note: Industry standard is a voltage drop of no greater than 5%.</p>
     </form>
- 
+    </div>
+    <div class=calcResults>
+        
+        <div class="results-box">
+            <p>Final Voltage (V)</p>
+            <p id="vFinal" style="margin: 10px 0;">&nbsp;</p>
+        </div>
+
+        <div class="results-box">
+            <p>Voltage Drop (V)</p>
+            <p id="vDrop" style="margin: 10px 0;">&nbsp;</p>
+        </div>
+
+        <div class="results-box1">
+            <p>Voltage Drop (%)</p>
+            <p id="vDropPercent" style="margin: 10px 0;"></p>
+            <p id="vDropPercentText"></p>
+        </div>
+
+        <div class="checkFLC">
+            <p>Current Carrying Capacity</p>
+            <p id="FLC" style="margin:10px 0;"></p>
+            <p id="FLCtext"></p>
+        </div>
+
+    </div>
+    </div>
+
+
     <script src="index.js" charset="utf-8"></script>
 </body>
 
@@ -113,7 +148,7 @@
         <a class="footer-link" href="https://joeban1.github.io/mysite/">Resume</a>
         <a class="footer-link"
             href="https://researchrepository.murdoch.edu.au/id/eprint/40401/1/Cappeluti2017%20.pdf">Thesis</a>
-        <p class="copyright">© 2020 Joe Cappeluti.</p>
+        <p class="copyright">© 2021 Joe Cappeluti.</p>
     </div>
 </footer>
 
@@ -122,4 +157,6 @@
 <!--
 
 https://www.jcalc.net/voltage-drop-calculator-as3008
+
+https://stackoverflow.com/questions/18938787/from-mysql-to-javascript-variable
 -->
